@@ -1,0 +1,52 @@
+#featured-menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch; 
+}
+
+.menu-item {
+    border: 1px solid #eee;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px; 
+}
+
+.menu-info { 
+    display: flex;        
+    flex-direction: column; 
+    flex-grow: 1;         
+    justify-content: space-between; 
+    padding: 0; 
+}
+
+.menu-info h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.menu-info .description { 
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px; 
+}
+
+.menu-info .price { 
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #d9534f;
+    margin-top: auto; 
+}
+

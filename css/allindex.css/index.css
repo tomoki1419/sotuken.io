@@ -1,0 +1,241 @@
+body {
+  font-family: "M+ FONTS", sans-serif;
+  margin: 0; 
+  padding: 0; 
+  background-color: #f3f3f3;
+  color: #333;
+  font-weight: bold;
+}
+
+.hero-section {
+    position: relative; /* 子要素のabsolute配置の基準にする */
+    width: 100%;
+    height: 100vh; /* 画面の高さいっぱいに広げる */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* アスペクト比を維持しつつ要素いっぱいに広げる */
+    z-index: 1; /* ヘッダーや文字より下に配置 */
+}
+
+.hero-section .hero-text {
+    position: relative;
+    z-index: 10; /* 画像より上に配置 */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字を見やすくするための影 */
+    text-align: center;
+}
+
+.hero-section .hero-text h2 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow:
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+}
+
+.hero-section .hero-text p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    text-shadow:
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000000,
+        -1px  1px 0 #000000,
+         1px  1px 0 #000000;
+}
+
+header {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px 20px; /* 修正前 */
+  box-sizing: border-box; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* ロゴとナビゲーションの間のスペース */
+}
+
+header h1 {
+  color: white; 
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+nav{
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: transparent;
+  position: static;
+  box-shadow: none;
+  list-style: none; 
+  padding: 0;
+  margin: 0; 
+}
+
+nav a {
+  color: white; 
+  text-decoration: none; 
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 10px 0; /* 上下に10pxの余白を追加 */
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    width: 180px;
+    background-color: #ffffff;
+    border-radius: 0 0 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.about {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.menu-link {
+  text-align: center;
+  padding: 30px;
+}
+
+.menu-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px;
+}
+
+.menu-item {
+    flex-basis: calc(33.33% - 20px);
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto; 
+}
+
+.menu {
+    text-align: center;
+    margin: 0 auto;    
+    padding: 20px; 
+}
+
+.view-all-menu a {
+  color: #000000;
+  text-decoration: none; 
+}
+
+.view-all-menu a:hover {
+  color: #949494;
+  text-decoration: underline; 
+  transition: color 0.2s ease;
+}
+
+.language-switcher {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.language-switcher button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-switcher button:hover {
+    background-color: #ffffff;
+    color: #333;
+}
+
+#news-list {
+  list-style: none; 
+  padding: 0;
+  margin: 20px 0;
+}
+
+.announcements-section {
+  background-color: #f9f9f9; /* 薄いグレーの背景色 */
+  border-radius: 8px; /* 角を丸くする */
+  padding: 20px;
+}
+

@@ -1,0 +1,48 @@
+/* announcements-section全体のスタイル */
+.announcements-section {
+  background-color: #f9f9f9; /* 薄いグレーの背景色 */
+  border-radius: 8px; /* 角を丸くする */
+  padding: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* お知らせの見出し（h3）のスタイル */
+.announcements-section h3 {
+  border-bottom: 2px solid #ff7f50; /* 下線を追加 */
+  padding-bottom: 5px;
+  display: inline-block; /* 下線が文字の幅に合わせる */
+}
+
+/* お知らせリスト全体（ul）のスタイル */
+#news-list {
+  list-style: none; /* 箇条書きの黒丸を消す */
+  padding: 0;
+  margin: 0;
+}
+
+/* 個々のお知らせ（li）のスタイル */
+#news-list li {
+  padding: 15px; /* 内側の余白を増やす */
+  margin-bottom: 10px; /* 各お知らせの下に余白 */
+  background-color: #fff; /* 背景色を白に */
+  border: 1px solid #eee; /* 薄い枠線 */
+  border-radius: 5px; /* 角を少し丸くする */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); /* 控えめな影 */
+  text-align: left; /* テキストを左寄せにする */
+}
+
+/* 最後のお知らせには下線をつけない */
+#news-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* 日付（strongタグ）のスタイル */
+#news-list li strong {
+  /* display: block; を削除 */
+  color: #007bff; /* 日付の色を変える */
+  font-weight: bold;
+  margin-right: 10px; /* 日付とタイトルの間に適切な余白を入れる */
+}

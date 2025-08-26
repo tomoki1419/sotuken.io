@@ -1,0 +1,64 @@
+/* 洋食風の全体的なデザイン */
+body {
+  font-family: "Georgia", serif; /* 落ち着いたセリフ体に変更 */
+  background-color: #f8f5f0; /* 温かみのあるオフホワイトの背景 */
+  color: #4a4a4a; /* 文字色を少し濃いグレーに */
+}
+
+/* ヘッダーのスタイル */
+header {
+  background-color: rgba(68, 52, 43, 0.7); /* ワインレッドやダークブラウン系の色 */
+}
+
+header h1,
+nav a {
+  color: #fff;
+}
+
+/* お知らせセクションのスタイル */
+.announcements-section {
+  background-color: #fdfdfd; /* 白に近い背景 */
+  border: 1px solid #e0d9d3;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* 影を少し強めに */
+}
+
+.announcements-section h3 {
+  color: #5d4037; /* ブラウン系の色 */
+  border-bottom: 2px solid #a1887f; /* 落ち着いた色の下線 */
+}
+
+#news-list li {
+  background-color: #fff;
+  border: 1px solid #e0d9d3;
+}
+
+#news-list li strong {
+  color: #966b5b; /* ブラウン系の色 */
+  font-weight: bold;
+}
+
+/* おすすめメニューのスタイル */
+.menu-item {
+  border: none; /* 枠線を消す */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 影を強調 */
+}
+
+/* ボタンやリンクの色 */
+.view-all-menu a {
+  color: #966b5b;
+}
+
+.language-switcher button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.language-switcher button:hover {
+  background-color: #fff;
+  color: #5d4037;
+}
+
+/* その他、洋食店の雰囲気に合わせて調整 */
+footer {
+  background-color: #e0d9d3;
+}

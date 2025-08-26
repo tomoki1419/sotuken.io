@@ -1,0 +1,89 @@
+/*
+ * 全ての要素に box-sizing: border-box; を適用
+ * これにより、padding や border を含めて要素の幅と高さが計算され、
+ * レイアウトの崩れを防ぎます。これはモダンなCSS開発において推奨される設定です。
+ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.Form { /* 以前のフォームに関するCSSは省略。このセクションは影響しないため */
+    /* ... フォームのCSSはここに続く ... */
+}
+
+/* メニューセクションのCSS */
+#featured-menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* PC向け: 4列 */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    /* グリッドアイテムの垂直方向の配置と高さを揃える */
+    align-items: stretch; /* 各グリッドアイテムがセルの高さに合わせて引き伸ばされる */
+}
+
+/* スマートフォン向けのスタイルをメディアクエリで設定 */
+@media screen and (max-width: 768px) { /* タブレットや広めのスマホ向け */
+    #featured-menu-container {
+        grid-template-columns: repeat(2, 1fr); /* 2列表示にする */
+        gap: 15px; /* ギャップも少し狭める */
+        padding: 15px; /* パディングも調整 */
+    }
+}
+
+@media screen and (max-width: 480px) { /* スマホ向け (さらに狭い画面) */
+    #featured-menu-container {
+        grid-template-columns: 1fr; /* 1列表示にする */
+        gap: 10px; /* ギャップをさらに狭める */
+        padding: 10px; /* パディングも調整 */
+    }
+}
+
+.menu-item {
+    display: flex;          /* ★重要: このアイテム自体をフレックスコンテナにする */
+    flex-direction: column; /* ★重要: アイテム内の要素を縦方向に並べる */
+    justify-content: space-between; /* コンテンツがアイテム下部に揃うように調整（必要に応じて） */
+    height: 100%;           /* ★重要: 親グリッドのセルに合わせて高さを100%にする */
+
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px; /* 画像の下に少し余白 */
+}
+
+.menu-info {
+    margin-top: auto; /* ★重要: これで menu-info が利用可能なスペースを消費して下部に移動 */
+}
+
+.menu-info h4 {
+    margin: 0;
+    font-size: 1.1em;
+    color: #333;
+    /* 日本語名であれば問題ないことが多いですが、長い単語の改行を制御したい場合は 'break-word' なども検討 */
+    word-break: normal; /* デフォルトの改行挙動に戻すか、必要に応じて 'break-all' や 'break-word' を検討 */
+    /* overflow-wrap: break-word; */
+}
+
+.menu-info .price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #d9534f;
+    margin-top: 5px;
+}

@@ -1,0 +1,97 @@
+body {
+    font-family: "Georgia", serif;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #f8f5f0; /* 温かみのあるオフホワイトの背景に調整 */
+    color: #4a4a4a;
+}
+    h1, h2 {
+      color: #000000;
+      font-family: "Georgia", serif;
+    }
+    h1 {
+      border-bottom: 3px solid #000000;
+      padding-bottom: 10px;
+    }
+    .menu-section {
+      margin-bottom: 40px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #000000;
+    }
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+    .menu-image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+    .menu-content {
+      flex-grow: 1;
+    }
+    h3 {
+      margin: 0 0 5px 0;
+      color: #000000;
+      font-size: 1.2rem;
+      font-family: "Georgia", serif;
+    }
+    p {
+      font-family: "Georgia", serif;
+      margin: 5px 0 0 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .recommended {
+      background-color: #ffffff;
+      border-left: 5px solid #000000;
+      padding: 10px;
+      margin-bottom: 30px;
+      font-weight: bold;
+      color: #000000;
+    }
+    .price-overview { 
+      background-color: #F5F5F5;
+      padding: 15px 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      color: #555;
+    }
+    footer a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #949494;
+    }
+
+    .menu-item h4,
+    .menu-item p {
+      font-family: "Georgia", serif;
+     }
+
+     .price-overview { 
+    background-color: #fdfdfd; /* 白に近い背景に調整 */
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    color: #555;
+}
